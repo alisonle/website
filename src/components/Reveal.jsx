@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion'
 
-const Reveal = ({ children, width = 'fit-content' }) => {
+// eslint-disable-next-line react/prop-types
+const Reveal = ({ children, width = 'fit-content', delay = 0 }) => {
 
     const ref = useRef(null)
 
@@ -25,7 +26,7 @@ const Reveal = ({ children, width = 'fit-content' }) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 0.5, delay: 0.25 + delay }}
         >
             {children}
         </motion.div>

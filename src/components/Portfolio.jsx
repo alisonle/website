@@ -1,5 +1,5 @@
 import React from 'react';
-import project1 from "../assets/project1.png"
+import project1 from "../assets/StarconzWebsite.png"
 import project2 from "../assets/project2.png"
 import project4 from "../assets/project4.png"
 import project5 from "../assets/project5.png"
@@ -10,16 +10,16 @@ import Reveal from './Reveal';
 const projects = [
     {
       img: project1,
-      title: "Project #1",
-      description: "UI for frontend development using React.",
+      title: "Starconz Entertainment",
+      description: "UI for frontend development using Figma, Wix, and HTML.",
       links: {
-        site: "#",
+        site: "https://www.starconz.com/",
         github: "#",
       },
     },
     {
       img: project2,
-      title: "Project #2",
+      title: "Noted",
       description: "A fullstack application built with Node.js and MongoDB.",
       links: {
         site: "#",
@@ -28,7 +28,7 @@ const projects = [
     },
     {
       img: project4,
-      title: "Project #3",
+      title: "Henry S. Miller",
       description: "An e-commerce platform with various features.",
       links: {
         site: "#",
@@ -37,7 +37,7 @@ const projects = [
     },
     {
       img: project5,
-      title: "Project #4",
+      title: "Source of Hope",
       description: "A mobile-friendly application using React Native.",
       links: {
         site: "#",
@@ -60,7 +60,9 @@ const Portfolio = () => {
     <div className='max-w-[1000px] mx-auto p-6 md:my-20' id="portfolio">
         <h2 className='text-3xl font-bold text-gray-200 mb-8'>Portfolio</h2>
         {projects.map((project, index) => (
+            // eslint-disable-next-line react/jsx-key
             <Reveal>
+
             <div key={index} 
             className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} mb-12`}>
                 <div className='w-full md:w-1/2 p-4'>

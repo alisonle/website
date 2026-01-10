@@ -1,0 +1,60 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "rules": {
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": [
+          // Three.js properties
+          "^position$",
+          "^rotation$",
+          "^scale$",
+          "^intensity$",
+          "^castShadow$",
+          "^receiveShadow$",
+          "^fog$",
+          "^visible$",
+          "^args$",
+          "^attach$",
+          "^color$",
+          "^map$",
+          "^geometry$",
+          "^material$",
+          "^name$",
+          "^userData$",
+          "^type$",
+          "^id$",
+          "^uuid$",
+          "^parent$",
+          "^children$",
+          "^up$",
+          "^matrix$",
+          "^matrixWorld$",
+          "^matrixWorldNeedsUpdate$",
+          "^layers$",
+          "^matrixAutoUpdate$",
+          "^matrixWorldAutoUpdate$",
+          "^renderOrder$",
+          "^animations$",
+          
+          // Common Three.js Fiber props
+          "^fov$",
+          "^near$",
+          "^far$",
+          "^lookAt$",
+          "^quaternion$",
+          "^morphTargetInfluences$",
+          "^morphTargetDictionary$"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

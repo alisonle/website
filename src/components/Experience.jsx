@@ -4,24 +4,26 @@ import Reveal from './Reveal'
 
 const experiences = [
     {
-        company: 'First Company',
-        period: '2020 - Present',
-        description: 'Description of your experience in this company.',
+        company: 'Stone Global Realty',
+        period: 'December 2024 - May 2025',
+        description: 'Redesigned the website using Figma, Wordpress, and HTML to improve outdated structure and low' +
+            'engagement, leading to more intuitive navigation and higher user satisfaction.\n' +
+            'Enhanced site responsiveness and accessibility to resolve inconsistencies, ensuring seamless user experience.',
       },
       {
-        company: 'Second Company',
-        period: '2020 - Present',
-        description: 'Description of your experience in this company.',
+        company: 'Starconz Entertainment Group',
+        period: '2023 - October 2025',
+        description: 'Description ',
       },
       {
-        company: 'Third Company',
+        company: 'Henry S Miller',
         period: '2020 - Present',
-        description: 'Description of your experience in this company.',
+        description: 'Description ',
       },
       {
         company: 'Fourth Company',
         period: '2020 - Present',
-        description: 'Description of your experience in this company.',
+        description: 'Description ',
       },
 ]
 
@@ -29,7 +31,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className='p-8 max-w-[600px] mx-auto'>
+    <div className='p-8 max-w-[800px] mx-auto'>
         <h1 className='text-4xl text-gray-200 font-bold text-center mb-12'>Experience</h1>
         <motion.div
         className='space-y-8'
@@ -37,6 +39,7 @@ const Experience = () => {
         animate="visible"
         >
             {experiences.map((experience, index) => (
+                // eslint-disable-next-line react/jsx-key
                 <Reveal>
                 <motion.div
                     key={index}
@@ -44,8 +47,8 @@ const Experience = () => {
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.3}}
                     transition={{ duration: 1}}
-                    className=' border border-purple-600 p-6 rounded-lg shadow-md
-                    hover:shadow-xl transition-shadow duration-300 bg-purple-700/10'
+                    className=' border border-pink-400 p-6 rounded-lg shadow-md
+                    hover:shadow-xl transition-shadow duration-300 bg-pink-500/10'
                 >
                     <h2 className='text-gray-100 text-2xl font-semibold'>{experience.company}</h2>
                     <p className='text-gray-300'>{experience.period}</p>
