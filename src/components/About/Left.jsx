@@ -10,15 +10,15 @@ const Left = () => {
                 <div className="max-w-3xl mx-auto">
                     <Reveal width="100%">
                         <h3 className="text-4xl font-semibold mb-6 text-center md:text-left">
-                           <span className="text-pink-400"> About Me</span>
+                            <h1 className='text-4xl text-gray-200 font-bold text-center mb-12'>About Me</h1>
                         </h3>
                     </Reveal>
                     <Reveal width="100%" delay={0.2}>
                         <p className="text-lg leading-relaxed text-gray-300 text-justify">
-                            A passionate developer with expertise in modern web technologies.
-                            I love creating beautiful, responsive, and user-friendly applications
-                            that solve real-world problems. My journey in tech has been filled with
-                            exciting challenges that have helped me grow both professionally and personally.
+                            I&#39;m Alison Le, a Software Engineering student at University of Texas at Dallas, pursuing a certificate in Applied Experience Design and Research.
+                            My education has given me a strong foundation in backend development - working with databases, algorithms,
+                            and system architecture across multiple programming languages. Through internships,
+                            I&#39;ve applied that technical foundation to frontend and UI work, building polished, user-facing applications where solid engineering meets thoughtful design.
                         </p>
                     </Reveal>
                 </div>

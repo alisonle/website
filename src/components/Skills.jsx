@@ -2,68 +2,92 @@ import React from "react"
 import {
   DiHtml5,
   DiCss3,
-  DiSass,
   DiBootstrap,
   DiJavascript1,
   DiReact,
   DiNodejsSmall,
   DiMongodb,
   DiGithubBadge,
+    DiJava,
+    DiPython,
+    DiCode,
+    DiPhotoshop,
+    DiUnitySmall,
+    DiIllustrator,
+
 } from "react-icons/di"
+import {
+    FiFigma,
+} from "react-icons/fi"
+import { SiBlender } from "react-icons/si";
+import { PiFileSql } from "react-icons/pi";
+import { TbBrandThreejs } from "react-icons/tb";
 import Reveal from "./Reveal"
 
 const skills = [
     {
       category: 'Frontend',
       technologies: [
-        { name: 'HTML', icon: <DiHtml5 className='text-orange-600' /> },
-        { name: 'CSS', icon: <DiCss3 className='text-blue-600' /> },
-        { name: 'Sass', icon: <DiSass className='text-pink-600' /> },
-        { name: 'Bootstrap', icon: <DiBootstrap className='text-purple-600' /> },
-        { name: 'JavaScript', icon: <DiJavascript1 className='text-yellow-500' /> },
-        { name: 'React', icon: <DiReact className='text-blue-500' /> },
+        { name: 'HTML', icon: <DiHtml5 /> },
+        { name: 'CSS', icon: <DiCss3 /> },
+        { name: 'Bootstrap', icon: <DiBootstrap  /> },
+        { name: 'JavaScript', icon: <DiJavascript1  /> },
+        { name: 'Three.js', icon: < TbBrandThreejs /> },
+        { name: 'React', icon: <DiReact /> },
       ],
     },
     {
-      category: 'Fullstack',
+      category: 'Backend',
       technologies: [
-        { name: 'Node Js', icon: <DiNodejsSmall className='text-green-500' /> },
-        { name: 'MongoDB', icon: <DiMongodb className='text-green-600' /> },
-        { name: 'React', icon: <DiReact className='text-blue-500' /> },
-        { name: 'GitHub', icon: <DiGithubBadge className='text-gray-600' /> },
+        { name: 'Java', icon: <DiJava /> },
+        { name: 'C++', icon: < DiCode />},
+        { name: 'Python', icon: <DiPython /> },
+        { name: 'Node Js', icon: <DiNodejsSmall /> },
+        { name: 'MongoDB', icon: <DiMongodb /> },
+        { name: 'SQL', icon: <PiFileSql /> },
+
+
+      ],
+    },
+    {
+      category: 'Tools & Design',
+      technologies: [
+        { name: 'Figma', icon: <FiFigma Classname='text-white' /> },
+        { name: 'Blender', icon: <SiBlender /> },
+        { name: 'Photoshop', icon: <DiPhotoshop /> },
+        {name: 'Illustrator', icon: <DiIllustrator /> },
+        { name: 'Unity', icon: <DiUnitySmall /> },
+        { name: 'GitHub', icon: <DiGithubBadge /> },
+
       ],
     },
   ]
 
 const Skills = () => {
   return (
-    <div className="max-w-[650px] mx-auto flex flex-col justify-center px-4 text-gray-200 pb-8 md:py-12" id="skills">
+      <div className="max-w-6xl mx-auto flex flex-col justify-center px-4 text-gray-200 py-12" id="skills">
         <Reveal>
-        <h2 className="text-3xl font-bold mb-4 text-center">Skills</h2>
-        <p className="text-center mb-8">
-            I worked on various frontend and fullstack projects. Check them <a href="#" className="underline">there</a>.
-        </p>
+          <h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
 
-        <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8
-                        ">
+          {/* Flexbox approach for better centering control */}
+          <div className="flex flex-wrap justify-center gap-8 w-full">
             {skills.map((skill, index) => (
-                <div key={index} className="border border-pink-500 p-6 rounded-lg bg-pink-900/20 shadow-lg
-                                w-full md:w-1/2">
-                    <h3 className="text-xl font-bold mb-4 text-center">{skill.category}</h3>
-                    <div className="grid grid-cols-2 gap-4">
-                        {skill.technologies.map((tech, idx) => (
-                            <div key={idx} className="flex items-center space-x-2">
-                                <span className="text-2xl">{tech.icon}</span>
-                                <span>{tech.name}</span>
-                            </div>
-                        ))}
-                    </div>
+                <div key={index} className="border border-pink-500 p-8 rounded-lg bg-pink-900/20 shadow-lg w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm">
+                  <h3 className="text-xl font-bold mb-6 text-center">{skill.category}</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    {skill.technologies.map((tech, idx) => (
+                        <div key={idx} className="flex items-center space-x-3 min-w-[120px]">
+                          <span className="text-2xl flex-shrink-0">{tech.icon}</span>
+                          <span className="text-sm sm:text-base">{tech.name}</span>
+                        </div>
+                    ))}
+                  </div>
                 </div>
             ))}
-        </div>
+          </div>
         </Reveal>
-    </div>
+      </div>
   )
 }
 
-export default Skills
+export default Skills;

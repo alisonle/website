@@ -40,6 +40,7 @@ const Right = () => {
 
                     <Environment preset="city" />
 
+                    {/* eslint-disable-next-line react/no-unknown-property */}
                     <hemisphereLight intensity={0.15} groundColor="black" />
                     <spotLight
                         position={[10, 10, 10]}

@@ -4,27 +4,35 @@ import Reveal from './Reveal'
 
 const experiences = [
     {
+        company: 'Apple',
+        role: 'Technical Advisor',
+        period: 'June 2025 - Present',
+        description: '▪ Proactively implement efficient solutions, demonstrating strong problem-solving skills and sustaining an\n' +
+            'Average Handle Time (AHT) of 14.12, outperforming the department average. ',
+    },
+
+    {
         company: 'Stone Global Realty',
+        role: 'Web Development Intern',
         period: 'December 2024 - May 2025',
-        description: 'Redesigned the website using Figma, Wordpress, and HTML to improve outdated structure and low' +
+        description: '▪ Redesigned the website using Figma, Wordpress, and HTML to improve outdated structure and low' +
             'engagement, leading to more intuitive navigation and higher user satisfaction.\n' +
-            'Enhanced site responsiveness and accessibility to resolve inconsistencies, ensuring seamless user experience.',
+            '▪ Enhanced site responsiveness and accessibility to resolve inconsistencies, ensuring seamless user experience.',
       },
       {
         company: 'Starconz Entertainment Group',
-        period: '2023 - October 2025',
-        description: 'Description ',
+        period: 'July 2023 - October 2025',
+        description: '▪ Developed responsive React applications to resolve cross-device usability issues, delivering a consistent and seamless user experience.',
       },
       {
         company: 'Henry S Miller',
-        period: '2020 - Present',
-        description: 'Description ',
+        period: 'Sept 2022 - Dec 2022',
+        description: '▪ Designed professional brochures using Illustrator and Photoshop to elevate inconsistent branding, improving ' +
+            'visual quality and marketing impact. \n' +
+            '▪ Collaborated with developers to redesign the company website in Figma to address low engagement, ' +
+            'contributing to a 20% increase in website traffic.',
       },
-      {
-        company: 'Fourth Company',
-        period: '2020 - Present',
-        description: 'Description ',
-      },
+
 ]
 
 
@@ -51,8 +59,14 @@ const Experience = () => {
                     hover:shadow-xl transition-shadow duration-300 bg-pink-500/10'
                 >
                     <h2 className='text-gray-100 text-2xl font-semibold'>{experience.company}</h2>
+                    <p className='text-gray-300'>{experience.role}</p>
                     <p className='text-gray-300'>{experience.period}</p>
-                    <p className='text-gray-400 mt-4'>{experience.description}</p>
+                    <p 
+                      className='text-gray-400 mt-4 whitespace-pre-line'
+                      dangerouslySetInnerHTML={{
+                        __html: experience.description.replace(/\n/g, '<br />')
+                      }}
+                    />
 
 
                 </motion.div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import project1 from "../assets/StarconzWebsite.png"
-import project2 from "../assets/project2.png"
-import project4 from "../assets/project4.png"
-import project5 from "../assets/project5.png"
+import project2 from "../assets/HenrySMiller.png"
+import project4 from "../assets/SourceofHope.png"
+import project5 from "../assets/UTDiscussions.png"
 import project6 from "../assets/project6.png"
 import { AiFillGithub, AiOutlineGithub } from 'react-icons/ai'
 import Reveal from './Reveal';
@@ -10,8 +10,8 @@ import Reveal from './Reveal';
 const projects = [
     {
       img: project1,
-      title: "Starconz Entertainment",
-      description: "UI for frontend development using Figma, Wix, and HTML.",
+      title: "Starconz Entertainment Group",
+      description: "Entertainment company website with custom interactive components. Built with HTML, CSS, and Wix.",
       links: {
         site: "https://www.starconz.com/",
         github: "#",
@@ -19,40 +19,31 @@ const projects = [
     },
     {
       img: project2,
-      title: "Noted",
-      description: "A fullstack application built with Node.js and MongoDB.",
+      title: "Henry S. Miller",
+      description: "Real estate platform redesign focusing on user flow and property search experience. UI/UX design in Figma.",
       links: {
-        site: "#",
+        site: "https://henrysmiller.com/",
         github: "#",
       },
     },
     {
       img: project4,
-      title: "Henry S. Miller",
-      description: "An e-commerce platform with various features.",
+      title: "Source Of Hope",
+      description: "Non-profit website designed for accessibility and community engagement. Built with WordPress and custom HTML/CSS.",
       links: {
-        site: "#",
-        github: "#",
+        site: "https://thesourceofhope.org/",
       },
     },
     {
       img: project5,
-      title: "Source of Hope",
-      description: "A mobile-friendly application using React Native.",
+      title: "UTDiscussions",
+      description: "Student forum built in 24 hours for WeHack 2025 with discussion posts and course-based communities. HTML/CSS frontend, Java backend. ",
       links: {
-        site: "#",
+        site: "https://devpost.com/software/we-hack-project",
         github: "#",
       },
     },
-    {
-      img: project6,
-      title: "Project #5",
-      description: "A data visualization project using D3.js and other libraries.",
-      links: {
-        site: "#",
-        github: "#",
-      },
-    },
+
   ]
 
 const Portfolio = () => {
@@ -63,29 +54,35 @@ const Portfolio = () => {
             // eslint-disable-next-line react/jsx-key
             <Reveal>
 
-            <div key={index} 
+            <div key={index}
             className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} mb-12`}>
-                <div className='w-full md:w-1/2 p-4'>
-                    <img
-                        src={project.img}
-                        alt={project.title}
-                        className='w-full h-full object-cover rounded-lg shadow-lg'
-                    />
+                <div className='w-full md:w-1/2 p-4 h-64 md:h-80'>
+                    <div className='w-full h-full overflow-hidden rounded-lg shadow-lg'>
+                        <img
+                            src={project.img}
+                            alt={project.title}
+                            className='w-full h-full object-cover transition-transform duration-300 hover:scale-105'
+                        />
+                    </div>
                 </div>
                 <div className='w-full md:w-1/2 p-4 flex flex-col justify-center'>
                     <h3 className='text-2xl font-semibold text-gray-200 mb-4'>{project.title}</h3>
                     <p className='text-gray-300 mb-4'>{project.description}</p>
                     <div className='flex space-x-4'>
                         <a href={project.links.site}
-                            className='px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='px-4 py-2 bg-pink-400 text-white rounded-lg hover:bg-pink-700
                                         transition duration-300'>
                             View Site
                         </a>
-                        <a href={project.links.github}
-                            className='px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700
-                                        transition duration-300'>
-                            <AiOutlineGithub/>
-                        </a>
+                        {/* <a href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='px-4 py-2 bg-pink-400 text-white rounded-lg hover:bg-pink-700
+                                        transition duration-300 flex items-center justify-center'>
+                            <AiOutlineGithub className='w-5 h-5'/>
+                        </a> */}
 
                     </div>
 
