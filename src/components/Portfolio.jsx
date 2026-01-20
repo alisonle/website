@@ -3,8 +3,8 @@ import project1 from "../assets/StarconzWebsite.png"
 import project2 from "../assets/HenrySMiller.png"
 import project4 from "../assets/SourceofHope.png"
 import project5 from "../assets/UTDiscussions.png"
-import project6 from "../assets/project6.png"
-import { AiFillGithub, AiOutlineGithub } from 'react-icons/ai'
+{ /* import project6 from "../assets/project6.png"
+import { AiFillGithub, AiOutlineGithub } from 'react-icons/ai'*/}
 import Reveal from './Reveal';
 
 const projects = [

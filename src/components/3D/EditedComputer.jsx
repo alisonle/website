@@ -42,7 +42,7 @@ export function Model(props) {
             material={materials.LinkedinSS}
             position={[2.044, 1.66, -.532]}  // Adjust position (X, Y, Z)
             rotation={[Math.PI / 2 , Math.PI, Math.PI]}      // Adjust rotation (X, Y, Z in radians)
-            scale={[1.56, 7, 1.5]}     // Adjust scale (width, height, depth)
+            scale={[1.58, 7, 1.52]}     // Adjust scale (width, height, depth)
           />
         )}
       </group>
