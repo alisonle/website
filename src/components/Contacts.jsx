@@ -3,6 +3,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai"
 
 const contacts = () => {
     return (
+<section id="contact" className="w-full">
 <form
     action="https://getform.io/f/placeYourEndpointHere"
     method="POST"
@@ -42,6 +43,7 @@ const contacts = () => {
     </button>
 
 </form>
+</section>
     )
 }
 

@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
-import ComputerModel from '../3D/Computer';
+import { Model as ComputerModel } from '../3D/EditedComputer';
 
 const Right = () => {
     return (
@@ -34,7 +34,7 @@ const Right = () => {
                     <pointLight position={[10, 10, 10]} intensity={0.5} />
 
                     <ComputerModel
-                        scale={4}
+                        scale={6}
                         position={[-7, -5, 0]}
                     />
 

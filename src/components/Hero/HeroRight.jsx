@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
-import ComputerModel from '../3D/Computer';
+import { Model as ComputerModel } from '../3D/EditedComputer';
 
 const HeroRight = () => {
     return (
@@ -41,6 +41,7 @@ const HeroRight = () => {
 
                         <Environment preset="city" />
 
+                        {/* eslint-disable-next-line react/no-unknown-property */}
                         <hemisphereLight intensity={0.15} groundColor="black" />
                         <spotLight
                             position={[10, 10, 10]}

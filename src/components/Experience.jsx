@@ -7,7 +7,7 @@ const experiences = [
         company: 'Apple',
         role: 'Technical Advisor',
         period: 'June 2025 - Present',
-        description: '▪ Proactively implement efficient solutions, demonstrating strong problem-solving skills and sustaining an\n' +
+        description: '▪ Proactively implement efficient solutions, demonstrating strong problem-solving skills and sustaining an' +
             'Average Handle Time (AHT) of 14.12, outperforming the department average. ',
     },
 
@@ -21,11 +21,13 @@ const experiences = [
       },
       {
         company: 'Starconz Entertainment Group',
+          role: 'Web Developer',
         period: 'July 2023 - October 2025',
         description: '▪ Developed responsive React applications to resolve cross-device usability issues, delivering a consistent and seamless user experience.',
       },
       {
         company: 'Henry S Miller',
+          role: 'Intern',
         period: 'Sept 2022 - Dec 2022',
         description: '▪ Designed professional brochures using Illustrator and Photoshop to elevate inconsistent branding, improving ' +
             'visual quality and marketing impact. \n' +
