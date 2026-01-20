@@ -37,7 +37,7 @@ const HeroRight = () => {
                         <pointLight position={[10, 10, 10]} intensity={0.5} />
 
                         <Room
-                            scale={3}
+                            scale={3.2}
                             position={[-2, -6, 0]}
                         />
 
@@ -55,7 +55,7 @@ const HeroRight = () => {
 
                         <OrbitControls
                             minAzimuthAngle={-Math.PI / 4}
-                            maxAzimuthAngle={Math.PI / 2}  // Increased from PI/4 to PI/2 (90 degrees) for more right rotation
+                            maxAzimuthAngle={Math.PI / 2}
                             minPolarAngle={Math.PI / 4}
                             maxPolarAngle={Math.PI - Math.PI / 6}
                             enableDamping={true}

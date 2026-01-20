@@ -65,14 +65,23 @@ const skills = [
 
 const Skills = () => {
   return (
-      <div className="max-w-6xl mx-auto flex flex-col justify-center px-4 text-gray-200 py-12" id="skills">
+      <div className="max-w-6xl mx-auto flex flex-col justify-center px-6 sm:px-8 text-gray-200 py-8 md:py-12" id="skills">
         <Reveal>
           <h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
 
           {/* Flexbox approach for better centering control */}
-          <div className="flex flex-wrap justify-center gap-8 w-full">
+          <div className="flex flex-wrap justify-center gap-8 w-full py-4">
             {skills.map((skill, index) => (
-                <div key={index} className="border border-pink-500 p-8 rounded-lg bg-pink-900/20 shadow-lg w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm">
+                <div
+                  key={index}
+                  className="
+                    border border-pink-400 p-6 rounded-lg
+                    bg-pink-500/10
+                    w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]
+                    max-w-sm
+                    transition-transform duration-300 ease-in-out
+                    hover:scale-[1.02]
+                  ">
                   <h3 className="text-xl font-bold mb-6 text-center">{skill.category}</h3>
                   <div className="grid grid-cols-2 gap-4">
                     {skill.technologies.map((tech, idx) => (
