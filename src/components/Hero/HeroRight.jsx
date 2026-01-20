@@ -2,21 +2,23 @@ import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
-import { Model as ComputerModel } from '../3D/EditedComputer';
+import { Room } from '../3D/Room';
 
 const HeroRight = () => {
     return (
+
         <motion.div
+
             className="w-full flex justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
         >
-            <div className="w-full h-full">
+            <div className="w-full h-full" style={{ cursor: 'grab' }}>
                 <Canvas
                     shadows
-                    camera={{ position: [10, 5, 15], fov: 45 }}
+                    camera={{ position: [20, 8, 15], fov: 70 }}
                     style={{
                         background: 'transparent',
                         width: '100%',
@@ -34,9 +36,9 @@ const HeroRight = () => {
                         />
                         <pointLight position={[10, 10, 10]} intensity={0.5} />
 
-                        <ComputerModel
+                        <Room
                             scale={3}
-                            position={[-5, -2, 0]}
+                            position={[-2, -6, 0]}
                         />
 
                         <Environment preset="city" />
@@ -53,7 +55,7 @@ const HeroRight = () => {
 
                         <OrbitControls
                             minAzimuthAngle={-Math.PI / 4}
-                            maxAzimuthAngle={Math.PI / 4}
+                            maxAzimuthAngle={Math.PI / 2}  // Increased from PI/4 to PI/2 (90 degrees) for more right rotation
                             minPolarAngle={Math.PI / 4}
                             maxPolarAngle={Math.PI - Math.PI / 6}
                             enableDamping={true}
@@ -67,6 +69,7 @@ const HeroRight = () => {
                 </Canvas>
             </div>
         </motion.div>
+
     );
 };
 
