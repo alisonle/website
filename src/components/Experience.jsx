@@ -5,7 +5,7 @@ import Reveal from './Reveal'
 const experiences = [
     {
         company: 'Apple',
-        role: 'Technical Advisor',
+        role: 'Apple Support College Program Advisor',
         period: 'June 2025 - Present',
         description: '▪ Proactively implement efficient solutions, demonstrating strong problem-solving skills and sustaining an' +
             'Average Handle Time (AHT) of 14.12, outperforming the department average. ',
