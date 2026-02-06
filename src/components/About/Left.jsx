@@ -9,9 +9,9 @@ const Left = () => {
             <div className="w-full">
                 <div className="max-w-3xl mx-auto">
                     <Reveal width="100%">
-                        <h3 className="text-4xl font-semibold mb-6 text-center md:text-left">
+                        <h1 className="text-4xl font-semibold mb-6 text-center md:text-left">
                             <h1 className='text-4xl text-gray-200 font-bold text-center mb-12'>About Me</h1>
-                        </h3>
+                        </h1>
                     </Reveal>
                     <Reveal width="100%" delay={0.2}>
                         <p className="text-lg leading-relaxed text-gray-300 text-justify">

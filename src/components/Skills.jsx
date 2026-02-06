@@ -67,7 +67,7 @@ const Skills = () => {
   return (
       <div className="max-w-6xl mx-auto flex flex-col justify-center px-6 sm:px-12 text-gray-200 py-10 md:py-12" id="skills">
         <Reveal>
-          <h2 className="text-4xl text-gray-200 font-bold text-center mb-12">Skills</h2>
+          <h1 className="text-4xl text-gray-200 font-bold text-center mb-12">Skills</h1>
 
           {/* Flexbox approach for better centering control */}
           <div className="flex flex-wrap justify-center gap-8 w-full py-4 overflow-visible px-2">

@@ -31,7 +31,7 @@ const experiences = [
         period: 'Sept 2022 - Dec 2022',
         description: '▪ Designed professional brochures using Illustrator and Photoshop to elevate inconsistent branding, improving ' +
             'visual quality and marketing impact. \n' +
-            '▪ Collaborated with developers to redesign the company website in Figma to address low engagement, ' +
+            '▪ Collaborated with developers to redesign the company website in Figma to address low engagement,' +
             'contributing to a 20% increase in website traffic.',
       },
 

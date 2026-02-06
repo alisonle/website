@@ -49,7 +49,7 @@ const projects = [
 const Portfolio = () => {
   return (
     <div className='max-w-[1000px] mx-auto p-6 md:my-20' id="portfolio">
-        <h2 className='text-3xl font-bold text-gray-200 mb-8'>Portfolio</h2>
+        <h1 className='text-4xl text-gray-200 font-bold text-center mb-12'>Portfolio</h1>
         {projects.map((project, index) => (
             // eslint-disable-next-line react/jsx-key
             <Reveal>
@@ -66,7 +66,7 @@ const Portfolio = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-1/2 p-4 flex flex-col justify-center'>
-                    <h3 className='text-2xl font-semibold text-gray-200 mb-4'>{project.title}</h3>
+                    <h1 className='text-2xl font-semibold text-gray-200 mb-4'>{project.title}</h1>
                     <p className='text-gray-300 mb-4'>{project.description}</p>
                     <div className='flex space-x-4'>
                         <a href={project.links.site}
