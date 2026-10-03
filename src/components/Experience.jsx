@@ -4,6 +4,14 @@ import Reveal from './Reveal'
 
 const experiences = [
     {
+        company: 'Supreme Lending',
+        role: 'Web Development Intern',
+        period: 'June 2026 - Aug 2026',
+        description: '▪ Debug and remediate defects across a production TypeScript/React/JavaScript codebase, tracing issues to root cause and validating fixes through regression testing to maintain system reliability /n' +
+        ' ▪ Collaborate cross-functionally to build and integrate a PHP-based AI chatbot into an existing environment, testing automated workflows end-to-end and documenting functionality for team-wide adoption ',
+    },
+
+    {
         company: 'Apple',
         role: 'Apple Support College Program Advisor',
         period: 'June 2025 - Present',
